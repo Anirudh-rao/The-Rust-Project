@@ -55,3 +55,17 @@ Any program requires comments, and Rust supports a few different varieties:
     1. /// Generate library docs for the following item.
     
     2. //! Generate library docs for the enclosing item.
+
+
+## Formatter Print 
+
+Printing is handeled by a series of macros defined in the `std::fmt`` some of which are :
+
+1. `format!`: write formatter text to string
+2. `print!` : same as formate! but the text is printed to the console(io::stdout).
+3. `println!`: same as print! but newline is appended.
+4. `eprint!`: same as print! but the text is printed to the standard erro(io::stderr).
+5. `eprintln!`: same as eprint! but a newline is appended.
+
+
+
