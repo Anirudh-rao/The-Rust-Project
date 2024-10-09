@@ -67,5 +67,16 @@ Printing is handeled by a series of macros defined in the `std::fmt`` some of wh
 4. `eprint!`: same as print! but the text is printed to the standard erro(io::stderr).
 5. `eprintln!`: same as eprint! but a newline is appended.
 
+## Debug 
+
+All type which want to use `std::fmt` formatting `traits` require an implemntation to be printable.
+Automatic implemntatios are only provided for types such as in the std libaray.
+All other must be manually implmented somehow.
+
+The `fmt::Debug` trait makes this very straightforward.
+All type can `derive` the `fmt::Debug` implemntation. 
+This is not true for `fmt::Display` which must be manually implmented.
+
+
 
 
