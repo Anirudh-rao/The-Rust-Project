@@ -34,4 +34,7 @@ Rust also supports scientific `E-notation`, e.g. `1e6`, `7.6e-4`. The associated
 
 We need to tell the compiler the type of the literals we use. For now, we'll use the `u32` suffix to indicate that the literal is an unsigned `32-bit integer`, and the `i32` suffix to indicate that it's a signed `32-bit integer`.
 
+## Tuples
+
+A tuple is a collection of values of different types. Tuples are constructed using parentheses `()`, and each tuple itself is a value with type signature `(T1, T2, ...)`, where `T1`, `T2` are the types of its members. Functions can use tuples to return multiple values, as tuples can hold any number of values.
 
