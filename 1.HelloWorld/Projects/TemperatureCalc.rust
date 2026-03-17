@@ -1,0 +1,59 @@
+//Used to get user input
+use std::io;
+
+
+fn main(){
+ println!("Welcome to Temperature Calculator");
+ println!("1: Celcius to Fahernheit!");
+ println!("2: Fahernheit to Celcius!");
+ println!("Select the Prefered Options");
+
+ let mut choice = String::new();
+ io::stdin().read_line(&mut choice).expect("Failed to Read input");
+ let choice:u32 =  match choice.trim().parse(){
+	Ok(num) => num,
+	Err(_) =>{
+	println!("Invalid Choice . Please enter 1 or 2");
+	return;
+
+	}
+};
+ if choice == 1{
+    celcius_to_fahernheit();
+  }else if choice == 2{
+     fahernheit_to_Celcius();
+
+  }
+}
+
+fn celcius_to_fahernheit(){
+  println!("Enter the temperature in Celcius");
+  let mut temp = String::new();
+  io::stdin().read_line(&mut temp).expect("Failed to read input");
+  let temp:f64 = match temp.trim().parse(){
+	Ok(num) => num,
+	Err(_) => {
+	println!("Invalid Input.Please enter a valid number.");
+	return;
+	    }
+	};
+  let f = (temp * 9.0/ 5.0) + 32.0;
+  println!("{:2} C is {:2}.F ",temp, f);
+
+}
+
+fn fahernheit_to_Celcius(){
+  println!("Enter the temperature in Celcius");
+  let mut temp = String::new();
+  io::stdin().read_line(&mut temp).expect("Failed to read input");
+  let temp:f64 = match temp.trim().parse(){
+        Ok(num) => num,
+        Err(_) => {
+        println!("Invalid Input.Please enter a valid number.");
+        return;
+        }
+        };
+  let c = (temp - 32.0) * 5.0 / 9.0;
+  println!("{:2} F is {:2}.C ",temp, c);
+
+}

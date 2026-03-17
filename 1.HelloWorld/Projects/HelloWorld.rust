@@ -1,0 +1,6 @@
+ fn main(){
+println!("Hello World from Rust!");
+println!("This is a Project Section from Rust");
+
+
+}
