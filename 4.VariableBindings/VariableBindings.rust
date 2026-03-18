@@ -1,0 +1,24 @@
+/*
+1. Rust provides type safety via static typing
+2. Variable Binding can be type annotated when declared
+3. Compiler will auto infer type of variable. 
+*/
+
+fn main(){
+let a_integer = 1u32;
+let a_boolean =  true;
+let unit  = {};
+
+let copied_integer = a_integer;
+
+println!("An integer: {:?}", copied_integer);
+println!("A Boolean :{:?}",a_boolean);
+println!("Meet the unit value:{:?}",unit);
+
+
+//Compiler warns about unused variable bindings
+//These can be supressed using '_' before the variable name
+let _unused_variable  = 3u32; 
+
+}
+
